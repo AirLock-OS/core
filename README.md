@@ -55,3 +55,29 @@ graph LR
     Scout_VM -->|Sanitize & Strip JS| Shared_Mem(Data Diode Buffer)
     Shared_Mem -->|Read Only| RAG_VM[Vault / RAG]
     RAG_VM -.->|X BLOCKED X| Scout_VM
+```
+
+### 2. Privacy-First Inference
+The Inference Module has direct access to the GPU via PCIe Passthrough, but zero access to the network card. It is physically impossible for the model to "leak" your prompts to a remote server.
+
+## ⚖️ License & Commercial Use
+AirLock OS is open-source software licensed under the GNU Affero General Public License v3 (AGPL-3.0).
+
+### Summary for Developers
+* ✅ You can download, modify, and use AirLock for personal or internal business use.
+
+* ✅ You can contribute to the code.
+
+* ⚠️ You cannot wrap this software in a SaaS service or distribute a closed-source modification without releasing your source code.
+
+### Commercial Licensing
+For Enterprise deployments, OEM integration, or use cases requiring a non-AGPL license (e.g., embedding in proprietary hardware), please contact the maintainers at [Your Email Here] for a Commercial License.
+
+## 🚀 Roadmap
+* [ ] Phase 1: The Spike - Booting Cloud Hypervisor on Diskless Alpine with GPU Passthrough.
+
+* [ ] Phase 2: The Link - Implementing Zero-Copy shared memory between isolated VMs.
+
+* [ ] Phase 3: The Lock - Developing the "Data Diode" logic and Immutable Boot process.
+
+<div align="center"> <sub>Built with 🦀 Rust and 🛡️ Paranoia.</sub> </div>
