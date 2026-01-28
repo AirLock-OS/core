@@ -13,7 +13,7 @@ id_rsa.pub
 secrets/
 private/
 
-# Ignore any file with "private" in the name (Good for your AI notes)
+# Ignore any file with "private" in the name
 *private*.md
 _planning/
 
@@ -22,7 +22,7 @@ _planning/
 # ----------------------------------------------------------------------
 /target/
 **/*.rs.bk
-Cargo.lock # Optional: Keep this if building an App, remove if building a Lib. Keep for AirLock.
+Cargo.lock # Optional: Keep this if building an App, remove if building a Lib. 
 
 # ----------------------------------------------------------------------
 # 💿 OS IMAGES & VIRTUALIZATION ARTIFACTS
